@@ -5,7 +5,6 @@ from sklearn import metrics
 import joblib
 import sys
 
-# Get data file from command line
 # Round 1: python train.py v1data.csv
 # Round 2: python train.py v2data.csv
 data_file = sys.argv[1]
