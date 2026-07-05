@@ -1,20 +1,26 @@
-# 23f1002103 MLOps Weekly Assignment - Week 1
+# 23f1002103 MLOps Weekly Assignment - Week 3
 
-## Files
+## Feast Feature Store Integration with IRIS Pipeline
 
-### training.ipynb
-- Fetches IRIS dataset from GCS bucket
-- Trains a DecisionTreeClassifier model
-- Saves model artifacts to GCS with timestamp folder
+### Files in this repo:
 
-### inference.ipynb
-- Fetches trained model from GCS artifacts folder
-- Runs inference on evaluation set
-- Prints accuracy and classification report
+**feast.ipynb**
+Main notebook containing all the code for this assignment. Includes:
+- Feast installation and setup
+- Feature definitions and feast apply
+- Training model using offline store
+- Materializing features to online store
+- Making predictions using online store
+- BigQuery backend setup (Task 6)
 
-## GCS Bucket Structure
-gs://mlops-iris-csv-pipeline-unique/
-├── data/iris.csv
-└── artifacts/
-    ├── 20260617_164425/model.joblib
-    └── 20260618_111618/model.joblib
+**iris_feast/iris_feature_repo/feature_repo/iris_features.py**
+Defines the Feast feature store components:
+- Entity: iris_id
+- Data Source: IRIS dataset
+- Feature View: sepal_length, sepal_width, petal_length, petal_width, species
+
+**iris_feast/iris_feature_repo/feature_repo/feature_store.yaml**
+Feast configuration file. Configures:
+- Offline store: BigQuery
+- Online store: Google Datastore
+- Registry: GCS bucket
