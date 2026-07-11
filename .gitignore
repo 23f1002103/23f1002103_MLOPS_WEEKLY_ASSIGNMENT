@@ -1,1 +1,10 @@
-/model.joblib
+*.bin
+*.joblib
+*.db
+*.parquet
+*.csv
+ga_resources/
+__pycache__/
+*.pyc
+!metrics.csv
+!eval_data.csv
