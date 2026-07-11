@@ -45,15 +45,7 @@ jobs:
           echo '```' >> report.md
           echo "" >> report.md
           echo "### Model Metrics" >> report.md
-          python -c "
-import csv
-with open('metrics.csv') as f:
-    row = next(csv.DictReader(f))
-print('| Metric | Value |')
-print('|---|---|')
-for k, v in row.items():
-    print(f'| {k} | {float(v):.4f} |')
-" >> report.md
+          python format_metrics.py >> report.md
 
       - name: Setup CML
         if: always()
