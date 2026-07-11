@@ -3,7 +3,7 @@ name: ML CI
 on: [push, pull_request, workflow_dispatch]
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
   pull-requests: write
 
