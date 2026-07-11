@@ -1,0 +1,66 @@
+name: ML CI
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: 'projects/927061930480/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+          service_account: '927061930480-compute@developer.gserviceaccount.com'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install dvc dvc-gs pandas scikit-learn joblib pytest
+
+      - name: Pull data and model via DVC
+        run: dvc pull
+
+      - name: Run tests
+        run: pytest test_model.py -v | tee pytest_output.txt
+
+      - name: Build report
+        if: always()
+        run: |
+          echo "## CI Test Report" > report.md
+          echo "" >> report.md
+          echo "### Test Results" >> report.md
+          echo '```' >> report.md
+          tail -n 20 pytest_output.txt >> report.md
+          echo '```' >> report.md
+          echo "" >> report.md
+          echo "### Model Metrics" >> report.md
+          python -c "
+import csv
+with open('metrics.csv') as f:
+    row = next(csv.DictReader(f))
+print('| Metric | Value |')
+print('|---|---|')
+for k, v in row.items():
+    print(f'| {k} | {float(v):.4f} |')
+" >> report.md
+
+      - name: Setup CML
+        if: always()
+        uses: iterative/setup-cml@v2
+
+      - name: Comment on PR
+        if: always()
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cml comment create report.md
