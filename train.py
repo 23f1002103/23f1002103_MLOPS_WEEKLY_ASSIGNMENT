@@ -1,4 +1,5 @@
 # CI/CD pipeline verified for Week 4 assignment
+# Model retraining and evaluation validated through automated GitHub Actions workflow
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
