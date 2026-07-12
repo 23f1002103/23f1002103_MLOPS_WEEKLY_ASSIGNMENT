@@ -1,4 +1,4 @@
-#Test suite for IRIS data validation and model evalution - Week4
+# Test suite for IRIS data validation and model evaluation - Week 4
 # Includes checks for missing values, schema consistency, and minimum accuracy thresholds
 import joblib
 import pandas as pd
