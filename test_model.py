@@ -1,4 +1,4 @@
-#Test suite for IRIS data validation and model evalution - Week4
+# Test suite for IRIS data validation and model evaluation - Week 4
 import joblib
 import pandas as pd
 import csv
