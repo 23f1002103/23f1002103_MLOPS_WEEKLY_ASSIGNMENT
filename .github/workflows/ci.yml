@@ -26,7 +26,7 @@ jobs:
         run: pip install dvc dvc-gs pandas scikit-learn joblib pytest mlflow
 
       - name: Pull data via DVC (data only, no model)
-        run: dvc pull data/
+        run: dvc pull data/v1data.csv data/v2data.csv
 
       - name: Run tests (model fetched from MLflow Registry)
         env:
@@ -40,7 +40,7 @@ jobs:
           echo "" >> report.md
           echo "### Test Results" >> report.md
           echo '```' >> report.md
-          tail -n 20 pytest_output.txt >> report.md
+          cat pytest_output.txt >> report.md || echo "No test output available" >> report.md
           echo '```' >> report.md
           echo "" >> report.md
           echo "### Model Metrics" >> report.md
