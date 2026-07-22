@@ -1,12 +1,9 @@
 name: ML CI
-
 on: [push, pull_request, workflow_dispatch]
-
 permissions:
   contents: write
   id-token: write
   pull-requests: write
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,12 +23,14 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install dvc dvc-gs pandas scikit-learn joblib pytest
+        run: pip install dvc dvc-gs pandas scikit-learn joblib pytest mlflow
 
-      - name: Pull data and model via DVC
-        run: dvc pull
+      - name: Pull data via DVC (data only, no model)
+        run: dvc pull data/
 
-      - name: Run tests
+      - name: Run tests (model fetched from MLflow Registry)
+        env:
+          MLFLOW_TRACKING_URI: http://34.135.49.194:5000
         run: pytest test_model.py -v | tee pytest_output.txt
 
       - name: Build report
