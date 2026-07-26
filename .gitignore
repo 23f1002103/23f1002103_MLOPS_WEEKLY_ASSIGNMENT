@@ -24,3 +24,14 @@ feast.ipynb
 __pycache__/
 *.pyc
 model.joblib
+ga_resources/
+iris_model.bin
+label_encoder.bin
+mlflow.db
+mlflow_old_v3.db
+week_6/
+.bash_history
+.gitconfig
+.lastactive
+.lesshst
+.sudo_as_admin_successful
