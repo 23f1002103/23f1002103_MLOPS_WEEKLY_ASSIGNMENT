@@ -1,0 +1,9 @@
+2026-07-12 06:46:57,433 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2026-07-12 06:46:57,554 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'get_value']
+2026-07-12 06:46:57,557 DEBUG    root            Running [gcloud.config.get-value] with arguments: [SECTION/PROPERTY: "project"]
+2026-07-12 06:46:57,563 DEBUG    root            On GCE from server: True
+2026-07-12 06:46:57,567 DEBUG    root            Chosen display Format:value(.)
+2026-07-12 06:46:57,568 INFO     root            Display format: "value(.)"
+2026-07-12 06:46:57,568 INFO     ___FILE_ONLY___ project-b38b370e-25fb-420a-a54
+
+2026-07-12 06:46:57,638 DEBUG    root            SDK update checks are disabled.

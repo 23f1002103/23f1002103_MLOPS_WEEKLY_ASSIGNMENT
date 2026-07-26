@@ -1,0 +1,116 @@
+2026-07-26 14:41:17,993 DEBUG    root            Loaded Command Group: ['gcloud', 'services']
+2026-07-26 14:41:18,000 DEBUG    root            Loaded Command Group: ['gcloud', 'services', 'enable']
+2026-07-26 14:41:18,002 DEBUG    root            Running [gcloud.services.enable] with arguments: [SERVICE:1: "['containerregistry.googleapis.com']"]
+2026-07-26 14:41:18,002 DEBUG    root            On GCE from disk cache: True
+2026-07-26 14:41:18,008 DEBUG    root            On GCE from memory cache: True
+2026-07-26 14:41:18,035 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2026-07-26 14:41:18,214 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "POST /v1/projects/project-b38b370e-25fb-420a-a54/services/containerregistry.googleapis.com:enable?alt=json HTTP/1.1" 403 None
+2026-07-26 14:41:18,220 DEBUG    root            Chosen display Format:default
+2026-07-26 14:41:18,274 DEBUG    root            Chosen display Format:default
+2026-07-26 14:41:18,271 DEBUG    root            (gcloud.services.enable) PERMISSION_DENIED: Permission denied to enable service [containerregistry.googleapis.com]
+Help Token: AdZh9GfXKDYtpXcN7MZKy5k5WwO1R0n8J5a3665zPCtuBnqO3upZaC3oCObFjUwbW1JU-wc0-Y-9UqylxV25c2LZYHMeBZ1oIIExDRH5oMcIY23E. This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property
+- '@type': type.googleapis.com/google.rpc.PreconditionFailure
+  violations:
+  - subject: '110002'
+    type: googleapis.com
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: serviceusage.googleapis.com
+  reason: AUTH_PERMISSION_DENIED
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/services/serviceusage.py", line 1476, in EnableApiCall
+    return client.services.Enable(request)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/serviceusage/v1/serviceusage_v1_client.py", line 262, in Enable
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpForbiddenError: HttpError accessing <https://serviceusage.googleapis.com/v1/projects/project-b38b370e-25fb-420a-a54/services/containerregistry.googleapis.com:enable?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Sun, 26 Jul 2026 14:41:18 GMT', 'server': 'ESF', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Permission denied to enable service [containerregistry.googleapis.com]\nHelp Token: AdZh9GfXKDYtpXcN7MZKy5k5WwO1R0n8J5a3665zPCtuBnqO3upZaC3oCObFjUwbW1JU-wc0-Y-9UqylxV25c2LZYHMeBZ1oIIExDRH5oMcIY23E",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.PreconditionFailure",
+        "violations": [
+          {
+            "type": "googleapis.com",
+            "subject": "110002"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "AUTH_PERMISSION_DENIED",
+        "domain": "serviceusage.googleapis.com"
+      }
+    ]
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 941, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 968, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/services/enable.py", line 220, in Run
+    op = serviceusage.EnableApiCall(project, args.service[0])
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/services/serviceusage.py", line 1479, in EnableApiCall
+    exceptions.ReraiseError(e, exceptions.EnableServiceException)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/services/exceptions.py", line 214, in ReraiseError
+    core_exceptions.reraise(klass(api_lib_exceptions.HttpException(err)))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/six/__init__.py", line 718, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/services/serviceusage.py", line 1476, in EnableApiCall
+    return client.services.Enable(request)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/serviceusage/v1/serviceusage_v1_client.py", line 262, in Enable
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+googlecloudsdk.api_lib.services.exceptions.EnableServiceException: PERMISSION_DENIED: Permission denied to enable service [containerregistry.googleapis.com]
+Help Token: AdZh9GfXKDYtpXcN7MZKy5k5WwO1R0n8J5a3665zPCtuBnqO3upZaC3oCObFjUwbW1JU-wc0-Y-9UqylxV25c2LZYHMeBZ1oIIExDRH5oMcIY23E. This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property
+- '@type': type.googleapis.com/google.rpc.PreconditionFailure
+  violations:
+  - subject: '110002'
+    type: googleapis.com
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: serviceusage.googleapis.com
+  reason: AUTH_PERMISSION_DENIED
+2026-07-26 14:41:18,279 ERROR    root            (gcloud.services.enable) PERMISSION_DENIED: Permission denied to enable service [containerregistry.googleapis.com]
+Help Token: AdZh9GfXKDYtpXcN7MZKy5k5WwO1R0n8J5a3665zPCtuBnqO3upZaC3oCObFjUwbW1JU-wc0-Y-9UqylxV25c2LZYHMeBZ1oIIExDRH5oMcIY23E. This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property
+- '@type': type.googleapis.com/google.rpc.PreconditionFailure
+  violations:
+  - subject: '110002'
+    type: googleapis.com
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: serviceusage.googleapis.com
+  reason: AUTH_PERMISSION_DENIED

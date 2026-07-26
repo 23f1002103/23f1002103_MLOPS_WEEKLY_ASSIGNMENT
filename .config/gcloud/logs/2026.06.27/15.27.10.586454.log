@@ -1,0 +1,17 @@
+2026-06-27 15:27:10,609 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2026-06-27 15:27:10,615 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2026-06-27 15:27:10,618 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--format: "value(projectNumber)", PROJECT_ID_OR_NUMBER: "project-b38b370e-25fb-420a-a54"]
+2026-06-27 15:27:10,627 DEBUG    root            On GCE from server: True
+2026-06-27 15:27:10,637 DEBUG    root            On GCE from memory cache: True
+2026-06-27 15:27:10,648 DEBUG    root            On GCE from memory cache: True
+2026-06-27 15:27:10,660 DEBUG    root            On GCE from memory cache: True
+2026-06-27 15:27:10,672 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2026-06-27 15:27:10,675 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/927061930480-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2026-06-27 15:27:10,678 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email HTTP/1.1" 200 871
+2026-06-27 15:27:10,710 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2026-06-27 15:27:10,778 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/project-b38b370e-25fb-420a-a54?alt=json HTTP/1.1" 200 None
+2026-06-27 15:27:10,779 DEBUG    root            Chosen display Format:default value(projectNumber)
+2026-06-27 15:27:10,780 INFO     root            Display format: "default value(projectNumber)"
+2026-06-27 15:27:10,834 INFO     ___FILE_ONLY___ 927061930480
+
+2026-06-27 15:27:10,844 DEBUG    root            SDK update checks are disabled.

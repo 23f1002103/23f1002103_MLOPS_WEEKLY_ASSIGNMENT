@@ -1,0 +1,12 @@
+2026-07-11 20:16:18,867 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2026-07-11 20:16:18,874 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2026-07-11 20:16:18,877 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--format: "value(projectNumber)", PROJECT_ID_OR_NUMBER: "project-b38b370e-25fb-420a-a54"]
+2026-07-11 20:16:18,887 DEBUG    root            On GCE from server: True
+2026-07-11 20:16:18,897 DEBUG    root            On GCE from memory cache: True
+2026-07-11 20:16:18,922 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2026-07-11 20:16:18,995 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/project-b38b370e-25fb-420a-a54?alt=json HTTP/1.1" 200 None
+2026-07-11 20:16:18,997 DEBUG    root            Chosen display Format:default value(projectNumber)
+2026-07-11 20:16:18,998 INFO     root            Display format: "default value(projectNumber)"
+2026-07-11 20:16:19,075 INFO     ___FILE_ONLY___ 927061930480
+
+2026-07-11 20:16:19,086 DEBUG    root            SDK update checks are disabled.

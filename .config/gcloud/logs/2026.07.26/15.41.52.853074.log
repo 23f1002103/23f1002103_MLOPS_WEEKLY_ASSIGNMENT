@@ -1,0 +1,18 @@
+2026-07-26 15:41:53,243 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2026-07-26 15:41:53,428 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2026-07-26 15:41:53,433 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'get_credentials']
+2026-07-26 15:41:53,440 DEBUG    root            On GCE from disk cache: True
+2026-07-26 15:41:53,443 DEBUG    root            On GCE from memory cache: True
+2026-07-26 15:41:53,652 DEBUG    root            On GCE from memory cache: True
+2026-07-26 15:41:54,195 DEBUG    root            Running [gcloud.container.clusters.get-credentials] with arguments: [--project: "project-b38b370e-25fb-420a-a54", --region: "us-central1", NAME: "iris-cluster"]
+2026-07-26 15:41:54,215 INFO     ___FILE_ONLY___ Fetching cluster endpoint and auth data.
+
+2026-07-26 15:41:54,218 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): container.googleapis.com:443
+2026-07-26 15:41:54,339 DEBUG    urllib3.connectionpool https://container.googleapis.com:443 "GET /v1/projects/project-b38b370e-25fb-420a-a54/locations/us-central1/clusters/iris-cluster?alt=json HTTP/1.1" 200 None
+2026-07-26 15:41:54,362 CRITICAL root            ACTION REQUIRED: gke-gcloud-auth-plugin, which is needed for continued use of kubectl, was not found or is not executable. Install gke-gcloud-auth-plugin for use with kubectl by following https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#install_plugin
+2026-07-26 15:41:54,368 DEBUG    root            Saved kubeconfig to /home/jupyter/.kube/config
+2026-07-26 15:41:54,368 INFO     ___FILE_ONLY___ kubeconfig entry generated for iris-cluster.
+
+2026-07-26 15:41:54,369 DEBUG    root            Chosen display Format:default
+2026-07-26 15:41:54,370 INFO     root            Display format: "default"
+2026-07-26 15:41:54,370 DEBUG    root            SDK update checks are disabled.

@@ -1,0 +1,4 @@
+2026-07-22 20:27:46,772 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2026-07-22 20:27:46,946 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'login']
+2026-07-22 20:27:46,950 DEBUG    root            Running [gcloud.auth.login] with arguments: []
+2026-07-22 20:27:46,951 DEBUG    root            On GCE from disk cache: True

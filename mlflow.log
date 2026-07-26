@@ -1,0 +1,1181 @@
+nohup: ignoring input
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:14:48 +0000] [37054] [INFO] Starting gunicorn 22.0.0
+[2026-07-22 17:14:48 +0000] [37054] [INFO] Listening at: http://0.0.0.0:5000 (37054)
+[2026-07-22 17:14:48 +0000] [37054] [INFO] Using worker: sync
+[2026-07-22 17:14:48 +0000] [37055] [INFO] Booting worker with pid: 37055
+[2026-07-22 17:14:48 +0000] [37056] [INFO] Booting worker with pid: 37056
+[2026-07-22 17:14:48 +0000] [37057] [INFO] Booting worker with pid: 37057
+[2026-07-22 17:14:48 +0000] [37058] [INFO] Booting worker with pid: 37058
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.71it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.64it/s]
+[2026-07-22 17:21:44 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:37056)
+[2026-07-22 17:21:44 +0000] [37056] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:21:44 +0000] [37056] [INFO] Worker exiting (pid: 37056)
+[2026-07-22 17:21:44 +0000] [38024] [INFO] Booting worker with pid: 38024
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:23:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:37058)
+[2026-07-22 17:23:43 +0000] [37058] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:23:43 +0000] [37058] [INFO] Worker exiting (pid: 37058)
+[2026-07-22 17:23:44 +0000] [38578] [INFO] Booting worker with pid: 38578
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:25:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:38578)
+[2026-07-22 17:25:43 +0000] [38578] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:25:43 +0000] [38578] [INFO] Worker exiting (pid: 38578)
+[2026-07-22 17:25:43 +0000] [38928] [INFO] Booting worker with pid: 38928
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:27:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:37055)
+[2026-07-22 17:27:43 +0000] [37055] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:27:43 +0000] [37055] [INFO] Worker exiting (pid: 37055)
+[2026-07-22 17:27:43 +0000] [39210] [INFO] Booting worker with pid: 39210
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:29:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:39210)
+[2026-07-22 17:29:43 +0000] [39210] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:29:43 +0000] [39210] [INFO] Worker exiting (pid: 39210)
+[2026-07-22 17:29:43 +0000] [39494] [INFO] Booting worker with pid: 39494
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:32:08 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:37057)
+[2026-07-22 17:32:08 +0000] [37057] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:32:08 +0000] [37057] [INFO] Worker exiting (pid: 37057)
+[2026-07-22 17:32:09 +0000] [39899] [INFO] Booting worker with pid: 39899
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:33:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:38928)
+[2026-07-22 17:33:43 +0000] [38928] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:33:43 +0000] [38928] [INFO] Worker exiting (pid: 38928)
+[2026-07-22 17:33:44 +0000] [40107] [INFO] Booting worker with pid: 40107
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:35:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:39899)
+[2026-07-22 17:35:43 +0000] [39899] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:35:43 +0000] [39899] [INFO] Worker exiting (pid: 39899)
+[2026-07-22 17:35:43 +0000] [40378] [INFO] Booting worker with pid: 40378
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:37:44 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:40378)
+[2026-07-22 17:37:44 +0000] [40378] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:37:44 +0000] [40378] [INFO] Worker exiting (pid: 40378)
+[2026-07-22 17:37:44 +0000] [40667] [INFO] Booting worker with pid: 40667
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:39:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:39494)
+[2026-07-22 17:39:43 +0000] [39494] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:39:43 +0000] [39494] [INFO] Worker exiting (pid: 39494)
+[2026-07-22 17:39:44 +0000] [41031] [INFO] Booting worker with pid: 41031
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:41:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:38024)
+[2026-07-22 17:41:43 +0000] [38024] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:41:43 +0000] [38024] [INFO] Worker exiting (pid: 38024)
+[2026-07-22 17:41:44 +0000] [41359] [INFO] Booting worker with pid: 41359
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:43:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:40107)
+[2026-07-22 17:43:43 +0000] [40107] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:43:43 +0000] [40107] [INFO] Worker exiting (pid: 40107)
+[2026-07-22 17:43:43 +0000] [41661] [INFO] Booting worker with pid: 41661
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:45:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:41661)
+[2026-07-22 17:45:43 +0000] [41661] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:45:43 +0000] [41661] [INFO] Worker exiting (pid: 41661)
+[2026-07-22 17:45:43 +0000] [41880] [INFO] Booting worker with pid: 41880
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 17:47:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:40667)
+[2026-07-22 17:47:43 +0000] [40667] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 17:47:43 +0000] [40667] [INFO] Worker exiting (pid: 40667)
+[2026-07-22 17:47:44 +0000] [42085] [INFO] Booting worker with pid: 42085
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 18:57:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:41880)
+[2026-07-22 18:57:43 +0000] [41880] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 18:57:43 +0000] [41880] [INFO] Worker exiting (pid: 41880)
+[2026-07-22 18:57:44 +0000] [50025] [INFO] Booting worker with pid: 50025
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 18:59:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:41031)
+[2026-07-22 18:59:43 +0000] [41031] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 18:59:43 +0000] [41031] [INFO] Worker exiting (pid: 41031)
+[2026-07-22 18:59:44 +0000] [37054] [ERROR] Worker (pid:41031) was sent SIGKILL! Perhaps out of memory?
+[2026-07-22 18:59:44 +0000] [50319] [INFO] Booting worker with pid: 50319
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:01:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:41359)
+[2026-07-22 19:01:43 +0000] [41359] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:01:43 +0000] [41359] [INFO] Worker exiting (pid: 41359)
+[2026-07-22 19:01:44 +0000] [37054] [ERROR] Worker (pid:41359) was sent SIGKILL! Perhaps out of memory?
+[2026-07-22 19:01:44 +0000] [50545] [INFO] Booting worker with pid: 50545
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:10:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:50025)
+[2026-07-22 19:10:43 +0000] [50025] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:10:43 +0000] [50025] [INFO] Worker exiting (pid: 50025)
+[2026-07-22 19:10:44 +0000] [51454] [INFO] Booting worker with pid: 51454
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:12:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:42085)
+[2026-07-22 19:12:43 +0000] [42085] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:12:43 +0000] [42085] [INFO] Worker exiting (pid: 42085)
+[2026-07-22 19:12:43 +0000] [51701] [INFO] Booting worker with pid: 51701
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:14:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:51701)
+[2026-07-22 19:14:43 +0000] [51701] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:14:43 +0000] [51701] [INFO] Worker exiting (pid: 51701)
+[2026-07-22 19:14:43 +0000] [51933] [INFO] Booting worker with pid: 51933
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:16:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:50545)
+[2026-07-22 19:16:43 +0000] [50545] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:16:43 +0000] [50545] [INFO] Worker exiting (pid: 50545)
+[2026-07-22 19:16:44 +0000] [52176] [INFO] Booting worker with pid: 52176
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:17:20 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:50319)
+[2026-07-22 19:17:20 +0000] [50319] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:17:20 +0000] [50319] [INFO] Worker exiting (pid: 50319)
+[2026-07-22 19:17:21 +0000] [52274] [INFO] Booting worker with pid: 52274
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:22:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:51454)
+[2026-07-22 19:22:43 +0000] [51454] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:22:43 +0000] [51454] [INFO] Worker exiting (pid: 51454)
+[2026-07-22 19:22:44 +0000] [52856] [INFO] Booting worker with pid: 52856
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:24:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:51933)
+[2026-07-22 19:24:43 +0000] [51933] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:24:43 +0000] [51933] [INFO] Worker exiting (pid: 51933)
+[2026-07-22 19:24:44 +0000] [53395] [INFO] Booting worker with pid: 53395
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:34:14 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:52176)
+[2026-07-22 19:34:14 +0000] [52176] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:34:14 +0000] [52176] [INFO] Worker exiting (pid: 52176)
+[2026-07-22 19:34:15 +0000] [54479] [INFO] Booting worker with pid: 54479
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:38:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:53395)
+[2026-07-22 19:38:43 +0000] [53395] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:38:43 +0000] [53395] [INFO] Worker exiting (pid: 53395)
+[2026-07-22 19:38:44 +0000] [54975] [INFO] Booting worker with pid: 54975
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:40:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:54479)
+[2026-07-22 19:40:43 +0000] [54479] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:40:43 +0000] [54479] [INFO] Worker exiting (pid: 54479)
+[2026-07-22 19:40:44 +0000] [55186] [INFO] Booting worker with pid: 55186
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:42:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:52856)
+[2026-07-22 19:42:43 +0000] [52856] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:42:43 +0000] [52856] [INFO] Worker exiting (pid: 52856)
+[2026-07-22 19:42:44 +0000] [55395] [INFO] Booting worker with pid: 55395
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:44:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:54975)
+[2026-07-22 19:44:43 +0000] [54975] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:44:43 +0000] [54975] [INFO] Worker exiting (pid: 54975)
+[2026-07-22 19:44:43 +0000] [55665] [INFO] Booting worker with pid: 55665
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:46:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:52274)
+[2026-07-22 19:46:43 +0000] [52274] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:46:43 +0000] [52274] [INFO] Worker exiting (pid: 52274)
+[2026-07-22 19:46:43 +0000] [56147] [INFO] Booting worker with pid: 56147
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:48:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:55186)
+[2026-07-22 19:48:43 +0000] [55186] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:48:43 +0000] [55186] [INFO] Worker exiting (pid: 55186)
+[2026-07-22 19:48:43 +0000] [56391] [INFO] Booting worker with pid: 56391
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:50:42 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:55665)
+[2026-07-22 19:50:42 +0000] [55665] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:50:42 +0000] [55665] [INFO] Worker exiting (pid: 55665)
+[2026-07-22 19:50:43 +0000] [56597] [INFO] Booting worker with pid: 56597
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:56:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:56391)
+[2026-07-22 19:56:43 +0000] [56391] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:56:43 +0000] [56391] [INFO] Worker exiting (pid: 56391)
+[2026-07-22 19:56:44 +0000] [57749] [INFO] Booting worker with pid: 57749
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 19:58:44 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:56597)
+[2026-07-22 19:58:44 +0000] [56597] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 19:58:44 +0000] [56597] [INFO] Worker exiting (pid: 56597)
+[2026-07-22 19:58:45 +0000] [58067] [INFO] Booting worker with pid: 58067
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 20:00:43 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:56147)
+[2026-07-22 20:00:43 +0000] [56147] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 20:00:43 +0000] [56147] [INFO] Worker exiting (pid: 56147)
+[2026-07-22 20:00:44 +0000] [58324] [INFO] Booting worker with pid: 58324
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.59it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.53it/s]
+[2026-07-22 20:05:28 +0000] [37054] [CRITICAL] WORKER TIMEOUT (pid:58324)
+[2026-07-22 20:05:28 +0000] [58324] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/micromamba/lib/python3.12/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2026-07-22 20:05:28 +0000] [58324] [INFO] Worker exiting (pid: 58324)
+[2026-07-22 20:05:29 +0000] [58996] [INFO] Booting worker with pid: 58996
+/opt/micromamba/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2026-07-22 20:07:22 +0000] [55395] [WARNING] Invalid request from ip=157.230.154.143: Invalid HTTP request line: ''
+[2026-07-22 21:28:32 +0000] [37054] [INFO] Handling signal: term
+[2026-07-22 21:28:32 +0000] [55395] [INFO] Worker exiting (pid: 55395)
+[2026-07-22 21:28:32 +0000] [57749] [INFO] Worker exiting (pid: 57749)
+[2026-07-22 21:28:32 +0000] [58996] [INFO] Worker exiting (pid: 58996)
+[2026-07-22 21:28:32 +0000] [58067] [INFO] Worker exiting (pid: 58067)
+[2026-07-22 21:28:38 +0000] [37054] [INFO] Shutting down: Master

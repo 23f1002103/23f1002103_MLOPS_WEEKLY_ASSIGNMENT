@@ -1,0 +1,8 @@
+2026-06-26 15:28:28,103 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2026-06-26 15:28:28,184 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2026-06-26 15:28:28,186 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "dataproc/region", VALUE: "us-central1"]
+2026-06-26 15:28:28,187 INFO     ___FILE_ONLY___ Updated property [dataproc/region].
+
+2026-06-26 15:28:28,188 DEBUG    root            Chosen display Format:default
+2026-06-26 15:28:28,188 INFO     root            Display format: "default"
+2026-06-26 15:28:28,193 DEBUG    root            SDK update checks are disabled.

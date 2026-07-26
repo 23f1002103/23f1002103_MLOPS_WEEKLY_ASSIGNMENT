@@ -1,0 +1,36 @@
+2026-07-22 16:47:22,254 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2026-07-22 16:47:22,303 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall_rules']
+2026-07-22 16:47:22,451 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall-rules', 'update']
+2026-07-22 16:47:22,695 DEBUG    root            On GCE from disk cache: True
+2026-07-22 16:47:22,701 DEBUG    root            Running [gcloud.compute.firewall-rules.update] with arguments: [--source-ranges: "['0.0.0.0/0']", NAME: "mlflow-port-5000"]
+2026-07-22 16:47:22,705 DEBUG    root            On GCE from memory cache: True
+2026-07-22 16:47:22,762 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2026-07-22 16:47:22,929 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/project-b38b370e-25fb-420a-a54/global/firewalls/mlflow-port-5000?alt=json HTTP/1.1" 403 None
+2026-07-22 16:47:22,935 DEBUG    root            Chosen display Format:list[title="Could not fetch resource:",always-display-title]
+2026-07-22 16:47:22,935 DEBUG    root            (gcloud.compute.firewall-rules.update) Could not fetch resource:
+ - Required 'compute.firewalls.get' permission for 'projects/project-b38b370e-25fb-420a-a54/global/firewalls/mlflow-port-5000'
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 941, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 968, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/compute/firewall_rules/update.py", line 93, in Run
+    objects = client.MakeRequests([get_request])
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 156, in MakeRequests
+    utils.RaiseToolException(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        errors, error_message='Could not fetch resource:')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 136, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 145, in RaiseException
+    raise exception(
+        ConstructList(error_message or 'Some requests did not succeed:',
+                      ParseErrors(errors)))
+googlecloudsdk.calliope.exceptions.ToolException: Could not fetch resource:
+ - Required 'compute.firewalls.get' permission for 'projects/project-b38b370e-25fb-420a-a54/global/firewalls/mlflow-port-5000'
+
+2026-07-22 16:47:22,966 ERROR    root            (gcloud.compute.firewall-rules.update) Could not fetch resource:
+ - Required 'compute.firewalls.get' permission for 'projects/project-b38b370e-25fb-420a-a54/global/firewalls/mlflow-port-5000'
+

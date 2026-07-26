@@ -1,0 +1,89 @@
+2026-07-26 14:45:06,780 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts']
+2026-07-26 14:45:06,825 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts', 'repositories']
+2026-07-26 14:45:09,631 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts', 'repositories', 'create']
+2026-07-26 14:45:09,700 DEBUG    root            On GCE from disk cache: True
+2026-07-26 14:45:09,704 DEBUG    root            Running [gcloud.artifacts.repositories.create] with arguments: [--description: "Docker repo for IRIS ML model", --location: "us-central1", --repository-format: "docker", REPOSITORY: "iris-repo"]
+2026-07-26 14:45:09,748 DEBUG    root            On GCE from memory cache: True
+2026-07-26 14:45:09,763 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2026-07-26 14:45:09,815 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "POST /v1/projects/project-b38b370e-25fb-420a-a54/locations/us-central1/repositories?alt=json&repositoryId=iris-repo HTTP/1.1" 403 None
+2026-07-26 14:45:09,824 DEBUG    root            Chosen display Format:default
+2026-07-26 14:45:09,845 DEBUG    root            Chosen display Format:default
+2026-07-26 14:45:09,847 DEBUG    root            Chosen display Format:default
+2026-07-26 14:45:09,849 DEBUG    root            (gcloud.artifacts.repositories.create) PERMISSION_DENIED: Permission 'artifactregistry.repositories.create' denied on resource '//artifactregistry.googleapis.com/projects/project-b38b370e-25fb-420a-a54/locations/us-central1' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D . This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: artifactregistry.googleapis.com
+  metadata:
+    error_info_id: CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE=
+    permission: artifactregistry.repositories.create
+    resource: projects/project-b38b370e-25fb-420a-a54/locations/us-central1
+    troubleshooter_url: https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D
+  reason: IAM_PERMISSION_DENIED
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 941, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 968, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 1008, in Run
+    ref, response = self._CommonRun(method_resource_arg, args)
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 507, in _CommonRun
+    response = _CallMethod(
+        method,
+    ...<5 lines>...
+        page_size=self.arg_generator.PageSize(args),
+    )
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 173, in _CallMethod
+    return method.Call(
+           ~~~~~~~~~~~^
+        request, location=location, limit=limit, page_size=page_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/registry.py", line 358, in Call
+    return request_func(global_params=global_params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/registry.py", line 421, in RequestFunc
+    return method(request, global_params=global_params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/artifactregistry/v1/artifactregistry_v1_client.py", line 1726, in Create
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpForbiddenError: HttpError accessing <https://artifactregistry.googleapis.com/v1/projects/project-b38b370e-25fb-420a-a54/locations/us-central1/repositories?alt=json&repositoryId=iris-repo>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Sun, 26 Jul 2026 14:45:09 GMT', 'server': 'ESF', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Permission 'artifactregistry.repositories.create' denied on resource '//artifactregistry.googleapis.com/projects/project-b38b370e-25fb-420a-a54/locations/us-central1' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D .",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "IAM_PERMISSION_DENIED",
+        "domain": "artifactregistry.googleapis.com",
+        "metadata": {
+          "resource": "projects/project-b38b370e-25fb-420a-a54/locations/us-central1",
+          "permission": "artifactregistry.repositories.create",
+          "troubleshooter_url": "https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D",
+          "error_info_id": "CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE="
+        }
+      }
+    ]
+  }
+}
+>
+2026-07-26 14:45:09,931 ERROR    root            (gcloud.artifacts.repositories.create) PERMISSION_DENIED: Permission 'artifactregistry.repositories.create' denied on resource '//artifactregistry.googleapis.com/projects/project-b38b370e-25fb-420a-a54/locations/us-central1' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D . This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: artifactregistry.googleapis.com
+  metadata:
+    error_info_id: CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE=
+    permission: artifactregistry.repositories.create
+    resource: projects/project-b38b370e-25fb-420a-a54/locations/us-central1
+    troubleshooter_url: https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmOWVlMy0xNDMyLTc4ZjYtOTI5Ny1lY2Q2NGU3ZDhjNTcSPXByb2plY3RzL3Byb2plY3QtYjM4YjM3MGUtMjVmYi00MjBhLWE1NC9sb2NhdGlvbnMvdXMtY2VudHJhbDE%3D
+  reason: IAM_PERMISSION_DENIED

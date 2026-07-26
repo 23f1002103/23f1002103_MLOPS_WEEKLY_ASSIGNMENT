@@ -1,0 +1,81 @@
+2026-07-11 20:24:58,963 DEBUG    root            Loaded Command Group: ['gcloud', 'iam']
+2026-07-11 20:24:59,000 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service_accounts']
+2026-07-11 20:24:59,007 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service-accounts', 'keys']
+2026-07-11 20:24:59,041 DEBUG    root            Loaded Command Group: ['gcloud', 'iam', 'service-accounts', 'keys', 'create']
+2026-07-11 20:24:59,045 DEBUG    root            On GCE from disk cache: True
+2026-07-11 20:24:59,050 DEBUG    root            Running [gcloud.iam.service-accounts.keys.create] with arguments: [--iam-account: "927061930480-compute@developer.gserviceaccount.com", OUTPUT-FILE: "key.json"]
+2026-07-11 20:24:59,053 DEBUG    root            On GCE from memory cache: True
+2026-07-11 20:24:59,064 DEBUG    root            On GCE from memory cache: True
+2026-07-11 20:24:59,077 DEBUG    root            On GCE from memory cache: True
+2026-07-11 20:24:59,088 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2026-07-11 20:24:59,090 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/927061930480-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2026-07-11 20:24:59,094 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email HTTP/1.1" 200 864
+2026-07-11 20:24:59,147 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): iam.googleapis.com:443
+2026-07-11 20:24:59,315 DEBUG    urllib3.connectionpool https://iam.googleapis.com:443 "POST /v1/projects/-/serviceAccounts/927061930480-compute@developer.gserviceaccount.com/keys?alt=json HTTP/1.1" 403 None
+2026-07-11 20:24:59,324 DEBUG    root            Chosen display Format:default
+2026-07-11 20:24:59,381 DEBUG    root            Chosen display Format:default
+2026-07-11 20:24:59,384 DEBUG    root            Chosen display Format:default
+2026-07-11 20:24:59,386 DEBUG    root            (gcloud.iam.service-accounts.keys.create) PERMISSION_DENIED: Permission 'iam.serviceAccountKeys.create' denied on resource '//iam.googleapis.com/projects/-/serviceAccounts/107334531850245819682' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D . This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: iam.googleapis.com
+  metadata:
+    error_info_id: CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg==
+    permission: iam.serviceAccountKeys.create
+    resource: projects/-/serviceAccounts/107334531850245819682
+    troubleshooter_url: https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D
+  reason: IAM_PERMISSION_DENIED
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 941, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 968, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/iam/service_accounts/keys/create.py", line 76, in Run
+    result = client.projects_serviceAccounts_keys.Create(
+        messages.IamProjectsServiceAccountsKeysCreateRequest(
+    ...<3 lines>...
+                privateKeyType=iam_util.KeyTypeToCreateKeyType(
+                    iam_util.KeyTypeFromString(args.key_file_type)))))
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/iam/v1/iam_v1_client.py", line 4130, in Create
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpForbiddenError: HttpError accessing <https://iam.googleapis.com/v1/projects/-/serviceAccounts/927061930480-compute@developer.gserviceaccount.com/keys?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Sat, 11 Jul 2026 20:24:59 GMT', 'server': 'ESF', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Permission 'iam.serviceAccountKeys.create' denied on resource '//iam.googleapis.com/projects/-/serviceAccounts/107334531850245819682' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D .",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "IAM_PERMISSION_DENIED",
+        "domain": "iam.googleapis.com",
+        "metadata": {
+          "error_info_id": "CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg==",
+          "permission": "iam.serviceAccountKeys.create",
+          "resource": "projects/-/serviceAccounts/107334531850245819682",
+          "troubleshooter_url": "https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D"
+        }
+      }
+    ]
+  }
+}
+>
+2026-07-11 20:24:59,514 ERROR    root            (gcloud.iam.service-accounts.keys.create) PERMISSION_DENIED: Permission 'iam.serviceAccountKeys.create' denied on resource '//iam.googleapis.com/projects/-/serviceAccounts/107334531850245819682' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D . This command is authenticated as 927061930480-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: iam.googleapis.com
+  metadata:
+    error_info_id: CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg==
+    permission: iam.serviceAccountKeys.create
+    resource: projects/-/serviceAccounts/107334531850245819682
+    troubleshooter_url: https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMTlmNTJkYS1jZWIxLTc3NWQtODI2NC0yYmE3NDkxYWMyNmYSMHByb2plY3RzLy0vc2VydmljZUFjY291bnRzLzEwNzMzNDUzMTg1MDI0NTgxOTY4Mg%3D%3D
+  reason: IAM_PERMISSION_DENIED

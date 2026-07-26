@@ -1,0 +1,44 @@
+2026-06-27 10:25:45,046 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2026-06-27 10:25:45,071 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2026-06-27 10:25:45,074 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json", --min-expiry: "1800"]
+2026-06-27 10:25:45,078 DEBUG    root            On GCE from server: True
+2026-06-27 10:25:45,089 DEBUG    root            On GCE from memory cache: True
+2026-06-27 10:25:45,101 DEBUG    root            On GCE from memory cache: True
+2026-06-27 10:25:45,114 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2026-06-27 10:25:45,116 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/927061930480-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2026-06-27 10:25:45,119 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email HTTP/1.1" 200 867
+2026-06-27 10:25:45,129 DEBUG    root            On GCE from memory cache: True
+2026-06-27 10:25:45,158 DEBUG    root            Chosen display Format:default json
+2026-06-27 10:25:45,158 INFO     root            Display format: "default json"
+2026-06-27 10:25:45,209 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "default",
+    "properties": {
+      "compute": {
+        "region": "us-central1"
+      },
+      "core": {
+        "account": "927061930480-compute@developer.gserviceaccount.com",
+        "disable_usage_reporting": "True",
+        "project": "project-b38b370e-25fb-420a-a54",
+        "universe_domain": "googleapis.com"
+      },
+      "dataproc": {
+        "region": "us-central1"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.c.c0AZ4bNpaLCkJkK_MJcB-1xG9Kp_F_ZBZ1AUxiZRAUzsxHK_IY6_tpNTLB0ni5m27wULBY__LJjxdsrcyytVmw1O5G2Mz4Z7VHky4yp7JQOpjZ1aO43NcUdHkByWyd6UuZnWi3yGxovYJr3srOfyASRCnux7dNRLBEH1UDBvloWk2hy2dvhn58H2OuY3k831h8qMshOVQyHwuHobz3ZA3IkDsSmJsX0Cufm2WcTFAHZ1kZtMyioqaNKeGW0PmH8W_Qv_AhaA7zheVA-UT6nXp_yQffwVKLlETTR0yFgVRjPS8bxhgirkq2K9UjXDCI9t5M1X11XUtxQfZhe-52Sg0AgpIAxYEwcQtaik_8q_8ZS_q1m0ZHA8_kKxaIJXIV4AoK2Ji-bnzik55Ni0vWDtG8BwL415CYcrrBurUVVO0ucodk1OIsy9YBdqnwMyVUvivdaWomr928IZ4vlxfbxJ91fdVJZRByzdn0XXgsnwXXvfS9eWJ4n_sn34un4Jinw_4-pFej3j-txSekkFtnrW9MYspRFVtgh1Mu0im-M67BxJR6wBdSf1JpnvWmWtiriaipUOZnZ2keyd_WfB4FpOXZd-RyeoZpyw1JXmtkR9YsjUx6z8W_FUReZ46S5qarXFSxJsvJr-9582cle5vxjS1nf_z-OJ7jF_qwl1eUl28kViuydv1OjZiheVXtmW5umuzyphvk3dBarFdfRFIaskefbd66I5OeFeX-636Rsjn5jieVUfgbxhbr8m_n6IYiiI5w-691SUqFWprkq4gZr5M6Ww_uB9_guZ0wf967mtnS55flrc9xxFcZRekcxfUt1bYznYYBgUqbxIUX6Z-3IUs403ggyIwSbyfd2VF4zUfXMtkxJhIIrYhj0BpsI8VI1cYj179p9sWY4uYkc6y-M9QOpq8unn5cfnB0B1xivYX8pscZs5XVWVskclvFZ6Qb4XoSsSo90hy_7vFxOdpr7pqZQUB5-7j-70pR-lUb52uwIfOqqSOkYpXXdmi",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQxMjk3OGJhNGMyOWVmMTE1NGEzNGU0ODcwYzdhM2E1MWQyNmRmMTAiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF6cCI6IjEwNzMzNDUzMTg1MDI0NTgxOTY4MiIsImV4cCI6MTc4MjU1OTU0NSwiaWF0IjoxNzgyNTU1OTQ1LCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiIxMDczMzQ1MzE4NTAyNDU4MTk2ODIifQ.hTcfY-WRmm307-0SMwRDplRrJ_0MdeVKX4C1_h0t6sOaMWHJSaCibVOQR8ZgCYrxGQ4Ji9-yFJZ_e_CcL_s0Rgph1DBOLKq6Mi6viUqCPbvqXyE_asEeyjaWxZ3XMa54z9oMoIDKgyhttrNr5DI3CsB3ACMeJZnR7bGJsA0MYD7CmBhhIqyPu42mINCbxEiyyIi1jhJwiKY8LxmMia40fFifw9dvMLA0u4LsrAHwan7PXeiNtZE0GLdv-ZN38aUKuy12pUJCSW1rrJNcZL7VU8NlN8jcC3Ki8Yb2CxU_JVJv53kazOnDqEJzsp5vlhWmlVcFf_MLXkAkfVnbTuEwpQ",
+    "regional_access_boundary": "0x7ffffffffffffffe",
+    "regional_access_boundary_expiry": "2026-06-27T13:29:57Z",
+    "token_expiry": "2026-06-27T10:50:12Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/home/jupyter/.config/gcloud/config_sentinel"
+  }
+}
+2026-06-27 10:25:45,209 INFO     ___FILE_ONLY___ 
+
+2026-06-27 10:25:45,220 DEBUG    root            SDK update checks are disabled.

@@ -1,0 +1,39 @@
+2026-07-05 20:05:22,339 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2026-07-05 20:05:22,363 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2026-07-05 20:05:22,366 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json", --min-expiry: "1800"]
+2026-07-05 20:05:22,366 DEBUG    root            On GCE from disk cache: True
+2026-07-05 20:05:22,377 DEBUG    root            On GCE from memory cache: True
+2026-07-05 20:05:22,407 DEBUG    root            Chosen display Format:default json
+2026-07-05 20:05:22,407 INFO     root            Display format: "default json"
+2026-07-05 20:05:22,465 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "default",
+    "properties": {
+      "compute": {
+        "region": "us-central1"
+      },
+      "core": {
+        "account": "927061930480-compute@developer.gserviceaccount.com",
+        "disable_usage_reporting": "True",
+        "project": "project-b38b370e-25fb-420a-a54",
+        "universe_domain": "googleapis.com"
+      },
+      "dataproc": {
+        "region": "us-central1"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.c.c0AZ4bNpZCmnHGerPLksmhj5f3ddEIQqklqEkA7GJVW6l4i3BbiHa38SNxSHDS1TTr6rlp72VZL5aMPihyNNaWpt-ASopYOOWn1ZLXwAZAC8PoMG8-AzrXSTOzlDos0QQR75OzKrPy8luy_KebNW-d2zwF0u5NyHzP35rF5aJrFBcSja7INgZNBFMeJv8xMoZkS-tIkUk9EMb-dhuz6_oL9Nzb0fBgCV17o7bcWvpqGsLLWPTnEqJesrMphFuxVvAlmTW9VHh5IoEx7q9b99vUdGxC86TbG5yposC7pq0z2GD2XaM2hiFpcACMK1uWbLbTdkT3m1CI6cJjBBdvrn4A0wpWFCMopq_ng6T3GdtdlDmHnYd6bPaFMGGR8-SP5DghzJ0d3MOwVUh_QBWoDN02rgQH416AB2d3aUiUjMe7RBj2jBlrcY7vR4a6ByekdR7Uz4cx3lM1ZtXnch5wBbpOvvnouwrihrhtm9fgbo9hac09Xs-28j6efJ3vO7OUam2p41mBxY6uFahWIfbUbWhz0nFZxl11Bz3Bxcu2-YbrMyWwsqwWh9aa40jWk921c7sS6h_Bbkmam2h1cBk9pgOsFV0YaS_VjIVa9JacUJk53Wzs4j6f4dI6kVZJFO3-aXd5s8_f567ZyhRvzRjSoVlI74w7brk778ZrjV7c18g4WuRnY0Jfluqrf93oF9JBf1n2vpfksQo2_ZQvIXR5Y2h17e2_fUOokfhV9ZaVaMYcw-5kZQIIstv27Rk285nyh4W4e2O9Qf7f-p2revWnvl1YgeIusMYr0sxm5aI1rlr5g2divtnwZXtbioImRMMx3xxVUtl9n6M6i1cJt_cc58jwmOSn_MfiWl_j1vwl30ksmic54u54dnmecqc1jUpd8v4R-smlIJiYpU0jwOR4vRO-_JW9k1SdlQjjrzo3hFc3tFfR2uOisWmaiZnBBQ8OqFXRW-Ml0QccswQxa56wwZ_gjn5Y3ib_JO03Ux06IfQtRQdywnWvb-I36_8",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYzNjE5MTM3MWM4YzRmZmQxNjI4NDZjZGU5MWE5Y2I0YzJiZWJhZTIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF6cCI6IjEwNzMzNDUzMTg1MDI0NTgxOTY4MiIsImV4cCI6MTc4MzI4NTUyMSwiaWF0IjoxNzgzMjgxOTIxLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiIxMDczMzQ1MzE4NTAyNDU4MTk2ODIifQ.Mu_3LzTw-6obcxHcxkfZdwTP12W1yFynSVIYJhT2IwrFZiorZmvpmqEokD1BGjz-kr6WevipHMM1S8lc9Rcbf6FAeJrWbt7cK2K6FzViH9aiGOVaan3jQ2LCCnobyR9ww0M5-aJFjUSRzutZra8TMNNOfpl9mflzI_2zYnr9J8hMnQeqw4mNKCBpQ8KYqg84z2cU_9wqMeBWQytDPPZvKp3mXegJSF-3QQwZA87hhZ0EILSCOlYeOl0x65n3LY_l8iYLpgDU2qyMmDOgOLeC6lAeIJiL7gl-N-pc83eoVYamUjfjON-QhyHR3qGBYyXUG3IV50xyPf4-MDIeFtz45w",
+    "regional_access_boundary": "0x7ffffffffffffffe",
+    "regional_access_boundary_expiry": "2026-07-06T02:05:21Z",
+    "token_expiry": "2026-07-05T21:01:43Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/home/jupyter/.config/gcloud/config_sentinel"
+  }
+}
+2026-07-05 20:05:22,465 INFO     ___FILE_ONLY___ 
+
+2026-07-05 20:05:22,474 DEBUG    root            SDK update checks are disabled.
