@@ -4,6 +4,10 @@ on:
   push:
     branches: [week_6]
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
