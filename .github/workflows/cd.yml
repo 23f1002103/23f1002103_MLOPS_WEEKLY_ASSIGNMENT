@@ -58,7 +58,7 @@ jobs:
         run: |
           echo "Waiting for LoadBalancer IP..."
           for i in {1..20}; do
-            IP=$(kubectl get service iris-deployment --template='{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}' 2>/dev/null)
+            IP=$(kubectl get service iris-service --template='{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}' 2>/dev/null)
             if [ -n "$IP" ]; then
               echo "EXTERNAL_IP=$IP" >> $GITHUB_ENV
               echo "Got IP: $IP"
