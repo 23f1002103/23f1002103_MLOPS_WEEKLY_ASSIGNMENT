@@ -1,77 +1,42 @@
-# Week 6 - ML Model Deployment & Serving
+# Week 7 - Stress Testing, Observability & Scaling the IRIS Pipeline
 
-## Overview
-This week focuses on containerizing the IRIS inference API with Docker and deploying it to Kubernetes on GCP, with automated CI/CD via GitHub Actions.
+## Student: 23f1002103
 
-## Architecture
-Code Push → GitHub Actions (CD) → Docker Build → Artifact Registry → GKE Deployment → Live API
+## Infrastructure
+- GKE Cluster: iris-cluster (us-central1-a)
+- Node: 1x e2-medium
+- External IP: 136.115.178.190
+- Artifact Registry: us-central1-docker.pkg.dev/project-b38b370e-25fb-420a-a54/iris-repo/iris-api:latest
 
-## Files
-| File | Description |
-|------|-------------|
-| `train.py` | Trains IRIS model and saves as model.joblib |
-| `main.py` | FastAPI app serving predictions |
-| `Dockerfile` | Containerizes the API |
-| `requirements.txt` | Python dependencies |
-| `.github/workflows/cd.yml` | CD pipeline via GitHub Actions |
+## Task 2: wrk Load Test (1000 connections)
+- Requests/sec: 214.08
+- Avg Latency: 1.70s
+- Timeouts: 6313
 
-## API Endpoints
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/` | GET | Health check |
-| `/predict` | POST | Predict IRIS species |
+## Task 3: HPA (maxReplicas: 3, 1000 connections)
+- Requests/sec: 212.96
+- Avg Latency: 1.83s
+- Timeouts: 6294
+- Replicas scaled to: 3
 
-## Sample Request
-```json
-POST http://34.68.43.2/predict
-{
-    "sepal_length": 5.1,
-    "sepal_width": 3.5,
-    "petal_length": 1.4,
-    "petal_width": 0.2
-}
-```
+## Task 4: GCP Monitoring
+- 34,621 log entries observed in Logs Explorer
+- Pod count spike visible in GKE Nodes and Pods dashboard
+- 267 errors during peak load
 
-## Sample Response
-```json
-{
-    "prediction": 0,
-    "species": "setosa"
-}
-```
+## Task 5: Bottleneck (maxReplicas: 1, 2000 connections)
+- Requests/sec: 194.07
+- Avg Latency: 0.00us (100% timeout)
+- Timeouts: 5836 (all requests failed)
 
-## Deployment Details
-| Component | Details |
-|-----------|---------|
-| Docker Image | us-central1-docker.pkg.dev/project-b38b370e-25fb-420a-a54/iris-repo/iris-api:latest |
-| Artifact Registry | iris-repo (us-central1) |
-| GKE Cluster | iris-cluster (us-central1) |
-| External IP | 34.68.43.2 |
+## Comparison
+| Metric | Task3 (3 replicas, 1000 conn) | Task5 (1 replica, 2000 conn) |
+|--------|-------------------------------|------------------------------|
+| Req/sec | 212.96 | 194.07 |
+| Latency | 1.83s | 0.00us (all timed out) |
+| Timeouts | 6294 | 5836 (100%) |
+| Replicas | 3 | 1 |
 
-## CD Pipeline Steps
-1. Authenticate to GCP via Workload Identity Federation
-2. Build Docker image
-3. Push to Google Artifact Registry
-4. Deploy to Google Kubernetes Engine
-5. Verify rollout status
-
-## How to Run Locally
-```bash
-# Train model
-python train.py
-
-# Run API
-uvicorn main:app --host 0.0.0.0 --port 8000
-
-# Test API
-curl -X POST "http://localhost:8000/predict" \
-  -H "Content-Type: application/json" \
-  -d '{"sepal_length": 5.1, "sepal_width": 3.5, "petal_length": 1.4, "petal_width": 0.2}'
-```
-
-## Tasks Completed
-- [x] Task 1: Pod vs Container explanation (video)
-- [x] Task 2: Dockerfile for IRIS API
-- [x] Task 3: GCP Service Account + WIF setup
-- [x] Task 4: GitHub Actions build & push
-- [x] Task 5: Deploy to GKE, live API working
+## Bottleneck Identified
+Single pod completely overwhelmed with 2000 connections causing 100% timeouts.
+Autoscaling to 3 replicas improved stability under 1000 connections.
