@@ -54,8 +54,8 @@ to a random class.
   data; clean/filter first, then assess if remaining clean data suffices.
 
 ## Reproduce
-\`\`\`bash
+```bash
 python poison_data.py
 python train_mlflow.py
 mlflow ui --backend-store-uri sqlite:///mlflow.db --host 0.0.0.0 --port 5000
-\`\`\`
+```
