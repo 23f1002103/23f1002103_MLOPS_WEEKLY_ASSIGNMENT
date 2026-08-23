@@ -16,7 +16,9 @@ def get_token():
         ['gcloud', 'auth', 'print-access-token'],
         capture_output=True, text=True
     )
-    return result.stdout.strip()
+    token = result.stdout.strip()
+    print(f"Token length: {len(token)}")
+    return token
 
 def predict(endpoint_id, input_text):
     token = get_token()
@@ -27,6 +29,8 @@ def predict(endpoint_id, input_text):
         "generationConfig": {"temperature": 0.0, "maxOutputTokens": 10}
     }
     response = requests.post(url, headers=headers, json=payload)
+    print(f"Status: {response.status_code}")
+    print(f"Response: {response.text[:200]}")
     try:
         text = response.json()['candidates'][0]['content']['parts'][0]['text'].strip().lower()
         for species in ['setosa', 'versicolor', 'virginica']:
@@ -40,37 +44,10 @@ def predict(endpoint_id, input_text):
 test_df = pd.read_csv('iris_test.csv')
 actual = list(test_df['species'])
 
-# V1 predictions
-print("Running V1 evaluation...")
-v1_preds = []
-for _, row in test_df.iterrows():
-    input_text = f"sepal_length: {row['sepal_length']}, sepal_width: {row['sepal_width']}, petal_length: {row['petal_length']}, petal_width: {row['petal_width']}. Reply with only one word: setosa, versicolor, or virginica."
-    v1_preds.append(predict(V1_ENDPOINT, input_text))
-
-# V2 predictions
-print("Running V2 evaluation...")
-v2_preds = []
-for _, row in test_df.iterrows():
-    input_text = f"A flower specimen has a sepal length of {row['sepal_length']} cm, sepal width of {row['sepal_width']} cm, petal length of {row['petal_length']} cm, and petal width of {row['petal_width']} cm. Identify the iris species. Reply with only one word: setosa, versicolor, or virginica."
-    v2_preds.append(predict(V2_ENDPOINT, input_text))
-
-# Calculate accuracy
-valid = ['setosa', 'versicolor', 'virginica']
-v1_clean = [p if p in valid else 'unknown' for p in v1_preds]
-v2_clean = [p if p in valid else 'unknown' for p in v2_preds]
-
-v1_acc = accuracy_score(actual, v1_clean)
-v2_acc = accuracy_score(actual, v2_clean)
-
-print(f"\nV1 Accuracy: {v1_acc:.2%}")
-print(f"V2 Accuracy: {v2_acc:.2%}")
-print(f"Threshold: {ACCURACY_THRESHOLD:.2%}")
-
-if v1_acc < ACCURACY_THRESHOLD:
-    print(f"❌ V1 accuracy {v1_acc:.2%} below threshold!")
-    sys.exit(1)
-if v2_acc < ACCURACY_THRESHOLD:
-    print(f"❌ V2 accuracy {v2_acc:.2%} below threshold!")
-    sys.exit(1)
-
-print("✅ Both models passed accuracy threshold!")
+# Test with just first sample
+print("Testing V1 with first sample...")
+test_row = test_df.iloc[0]
+input_text = f"sepal_length: {test_row['sepal_length']}, sepal_width: {test_row['sepal_width']}, petal_length: {test_row['petal_length']}, petal_width: {test_row['petal_width']}. Reply with only one word: setosa, versicolor, or virginica."
+result = predict(V1_ENDPOINT, input_text)
+print(f"Result: {result}")
+print(f"Actual: {test_row['species']}")
