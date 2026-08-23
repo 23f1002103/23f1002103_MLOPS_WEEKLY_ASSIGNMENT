@@ -1,42 +1,51 @@
-# Week 7 - Stress Testing, Observability & Scaling the IRIS Pipeline
+# Week 10 - LLMOps: Fine-Tuning Gemini on IRIS Pipeline
 
-## Student: 23f1002103
+## Overview
+This assignment demonstrates LLMOps principles by fine-tuning a Gemini model on the IRIS dataset using two different data representations and comparing their performance.
 
-## Infrastructure
-- GKE Cluster: iris-cluster (us-central1-a)
-- Node: 1x e2-medium
-- External IP: 136.115.178.190
-- Artifact Registry: us-central1-docker.pkg.dev/project-b38b370e-25fb-420a-a54/iris-repo/iris-api:latest
+## Project Structure
+- `task1_data_prep.ipynb` - Data preparation for V1 and V2 formats
+- `task4_evaluation.ipynb` - Model evaluation and comparison
+- `evaluate_llm.py` - CI/CD evaluation script
+- `iris_test.csv` - Test dataset
+- `iris_v1_train.jsonl` - V1 Raw format training data
+- `iris_v2_train.jsonl` - V2 Natural language training data
+- `.github/workflows/llmops_eval.yml` - CI/CD pipeline
 
-## Task 2: wrk Load Test (1000 connections)
-- Requests/sec: 214.08
-- Avg Latency: 1.70s
-- Timeouts: 6313
+## LLMOps Lifecycle
 
-## Task 3: HPA (maxReplicas: 3, 1000 connections)
-- Requests/sec: 212.96
-- Avg Latency: 1.83s
-- Timeouts: 6294
-- Replicas scaled to: 3
+### Task 1 & 2 - Data Preparation
+- Converted IRIS dataset into two JSONL formats
+- V1 (Raw): `sepal_length: 5.1, sepal_width: 3.5...`
+- V2 (Natural Language): `A flower specimen has a sepal length of 5.1 cm...`
+- Uploaded to GCS: `gs://llmops-iris-week10/data/`
 
-## Task 4: GCP Monitoring
-- 34,621 log entries observed in Logs Explorer
-- Pod count spike visible in GKE Nodes and Pods dashboard
-- 267 errors during peak load
+### Task 3 - Fine-Tuning on Vertex AI
+- Base model: `gemini-2.5-flash-lite`
+- Two fine-tuning jobs submitted on Vertex AI
+- Same hyperparameters for both (controlled experiment)
 
-## Task 5: Bottleneck (maxReplicas: 1, 2000 connections)
-- Requests/sec: 194.07
-- Avg Latency: 0.00us (100% timeout)
-- Timeouts: 5836 (all requests failed)
+### Task 4 - Evaluation Results
 
-## Comparison
-| Metric | Task3 (3 replicas, 1000 conn) | Task5 (1 replica, 2000 conn) |
-|--------|-------------------------------|------------------------------|
-| Req/sec | 212.96 | 194.07 |
-| Latency | 1.83s | 0.00us (all timed out) |
-| Timeouts | 6294 | 5836 (100%) |
-| Replicas | 3 | 1 |
+| Metric | V1 (Raw Format) | V2 (Natural Language) |
+|--------|----------------|----------------------|
+| Accuracy | 71.4% | 47.6% |
+| Format Compliance | 76.2% | 85.7% |
 
-## Bottleneck Identified
-Single pod completely overwhelmed with 2000 connections causing 100% timeouts.
-Autoscaling to 3 replicas improved stability under 1000 connections.
+### Why V1 Performed Better?
+- IRIS is structured numerical data
+- Raw format is more precise for numbers
+- Natural language adds unnecessary complexity
+- LLMs work better with natural language for text tasks, not numerical classification
+
+### Task 5 - CI/CD Pipeline
+- GitHub Actions workflow triggers on push to `week_10`
+- Validates data format and checks accuracy threshold (60%)
+- Fails pipeline if accuracy drops below threshold
+
+## GCP Resources
+- Project: `project-b38b370e-25fb-420a-a54`
+- Region: `us-central1`
+- GCS Bucket: `llmops-iris-week10`
+- V1 Model: `gemini-2.5-flash-lite` fine-tuned on raw format
+- V2 Model: `gemini-2.5-flash-lite` fine-tuned on natural language
