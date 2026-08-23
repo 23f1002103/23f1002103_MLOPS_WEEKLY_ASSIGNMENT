@@ -1,9 +1,8 @@
 import requests
-import google.auth
-import google.auth.transport.requests
 import pandas as pd
 from sklearn.metrics import accuracy_score
 import sys
+import subprocess
 
 # Config
 PROJECT_NUMBER = "927061930480"
@@ -13,16 +12,20 @@ V2_ENDPOINT = "6201707925296119808"
 ACCURACY_THRESHOLD = 0.60
 
 def get_token():
-    credentials, _ = google.auth.default()
-    auth_req = google.auth.transport.requests.Request()
-    credentials.refresh(auth_req)
-    return credentials.token
+    result = subprocess.run(
+        ['gcloud', 'auth', 'print-access-token'],
+        capture_output=True, text=True
+    )
+    return result.stdout.strip()
 
 def predict(endpoint_id, input_text):
     token = get_token()
     url = f"https://{LOCATION}-aiplatform.googleapis.com/v1/projects/{PROJECT_NUMBER}/locations/{LOCATION}/endpoints/{endpoint_id}:generateContent"
     headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    payload = {"contents": [{"role": "user", "parts": [{"text": input_text}]}], "generationConfig": {"temperature": 0.0, "maxOutputTokens": 10}}
+    payload = {
+        "contents": [{"role": "user", "parts": [{"text": input_text}]}],
+        "generationConfig": {"temperature": 0.0, "maxOutputTokens": 10}
+    }
     response = requests.post(url, headers=headers, json=payload)
     try:
         text = response.json()['candidates'][0]['content']['parts'][0]['text'].strip().lower()
@@ -63,12 +66,11 @@ print(f"\nV1 Accuracy: {v1_acc:.2%}")
 print(f"V2 Accuracy: {v2_acc:.2%}")
 print(f"Threshold: {ACCURACY_THRESHOLD:.2%}")
 
-# Check threshold
 if v1_acc < ACCURACY_THRESHOLD:
-    print(f"❌ V1 accuracy {v1_acc:.2%} below threshold {ACCURACY_THRESHOLD:.2%}")
+    print(f"❌ V1 accuracy {v1_acc:.2%} below threshold!")
     sys.exit(1)
 if v2_acc < ACCURACY_THRESHOLD:
-    print(f"❌ V2 accuracy {v2_acc:.2%} below threshold {ACCURACY_THRESHOLD:.2%}")
+    print(f"❌ V2 accuracy {v2_acc:.2%} below threshold!")
     sys.exit(1)
 
 print("✅ Both models passed accuracy threshold!")
